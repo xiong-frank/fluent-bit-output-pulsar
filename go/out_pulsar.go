@@ -105,7 +105,7 @@ func FLBPluginFlushCtx(ctx, data unsafe.Pointer, length C.int, tag *C.char) int 
 			break
 		}
 
-		log.Printf("pulsar-go -> original record: %v\n", record)
+		// log.Printf("pulsar-go -> original record: %v\n", record)
 		formatted := translateData(record)
 		// log.Printf("pulsar-go -> formatted data: %v\n", formatted)
 		payload, err := json.Marshal(formatted)
